@@ -1,0 +1,151 @@
+:root {
+    --clr-blue-main: hsl(217, 54%, 11%);
+    --clr-blue-card: hsl(216, 50%, 16%);
+    --clr-blue-line: hsl(215, 32%, 27%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --clr-primary-blue: hsl(215, 51%, 70%);
+    --clr-primary-cyan: hsl(178, 100%, 50%);
+
+    --ff-primary: "Outfit", sans-serif;
+
+    --fw-main: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-main: 0.9rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-size: var(--fs-main);
+    font-weight: var(--fw-main);
+    font-family: var(--ff-primary);
+    background-color: var(--clr-blue-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    max-width: 300px;
+    background-color: var(--clr-blue-card);
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.card-img {
+    border-radius: 0.6rem;
+}
+
+.img-container {
+    position: relative;
+}
+
+.card-preview {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.card-preview::before {
+    content: url('img/icon-view.svg');
+}
+
+.card-preview:hover {
+    opacity: 1;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-top: 1.2rem;
+    color: var(--clr-neutral-100);
+}
+
+.title:hover {
+    cursor: pointer;
+    color: var(--clr-primary-cyan);
+}
+
+.card-description {
+    color: var(--clr-primary-blue);
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.flex-group {
+    display: flex;
+    font-size: 1rem;
+    gap: 0.5rem;
+}
+
+.clr-cyan {
+    color: var(--clr-primary-cyan);
+    font-weight: var(--fw-bold);
+}
+
+.clr-blue {
+    color: var(--clr-primary-blue);
+    font-weight: var(--fw-bold);
+}
+
+hr {
+    color: var(--clr-blue-line);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    color: var(--clr-primary-blue);
+}
+
+.author-img {
+    max-width: 30px;
+    border: 1px solid var(--clr-neutral-100);
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+}
+
+a:hover {
+    color: var(--clr-primary-cyan);
+}
